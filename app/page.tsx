@@ -206,21 +206,21 @@ export default function PhotoPrintingPage() {
     {
       title: "Film Development",
       desc: "Professional 35mm and medium format film processing with same-day service",
-      icon: Film,
+      icon: Camera,
       price: "From $12.99",
       turnaround: "Same Day"
     },
     {
       title: "Slide Processing & Duplication",
       desc: "Convert and duplicate 35mm slides with high-quality digital scanning",
-      icon: Layers,
+      icon: ImageIcon,
       price: "From $1.99/slide",
       turnaround: "2-3 Days"
     },
     { 
       title: "Image CD's", 
       desc: "Digital photo storage and backup CDs for long-term preservation", 
-      icon: Disc,
+      icon: HardDrive,
       price: "From $9.99",
       turnaround: "Same Day"
     },
@@ -234,14 +234,14 @@ export default function PhotoPrintingPage() {
     { 
       title: "Document Scanning", 
       desc: "Regular and oversized document scanning up to 36 inches wide", 
-      icon: ScanLine,
+      icon: FileImage,
       price: "From $0.99/page",
       turnaround: "Same Day"
     },
     { 
       title: "Photo Slideshow", 
       desc: "Professional digital photo presentation creation for events", 
-      icon: Presentation,
+      icon: MonitorSpeaker,
       price: "From $49.99",
       turnaround: "3-5 Days"
     },
@@ -262,14 +262,14 @@ export default function PhotoPrintingPage() {
     { 
       title: "Large Format Posters", 
       desc: "High-resolution poster printing up to 48 inches wide", 
-      icon: FileText,
+      icon: Printer,
       price: "From $29.99",
       turnaround: "Same Day"
     },
     { 
       title: "Canvas Prints", 
       desc: "Gallery-wrapped canvas prints with museum-quality materials", 
-      icon: Palette,
+      icon: PaintBucket,
       price: "From $49.99",
       turnaround: "3-5 Days"
     },
@@ -463,7 +463,7 @@ export default function PhotoPrintingPage() {
 
       {/* Hero Banner */}
       <main id="main-content">
-                 <section className="relative bg-gradient-to-br from-[#2384C7] via-[#1D65B7] to-[#0C3A84] text-white py-12 sm:py-14 lg:py-16" aria-labelledby="hero-heading">
+                 <section className="relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] text-white py-12 sm:py-14 lg:py-16" aria-labelledby="hero-heading">
           <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
@@ -503,8 +503,8 @@ export default function PhotoPrintingPage() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">50K+</div>
-                <div className="text-sm opacity-90">Photos Printed</div>
+                <div className="text-2xl sm:text-3xl font-bold">15+ Years</div>
+                <div className="text-sm opacity-90">Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold">Same Day</div>
@@ -523,51 +523,121 @@ export default function PhotoPrintingPage() {
         </div>
       </section>
 
-      {/* In-House Processing Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Why Choose Us Section - Redesigned */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-h2 text-gray-900 mb-4">Why Choose Our Print Shop?</h2>
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full border border-orange-200">
+              <Award className="w-4 h-4 mr-2 inline" />
+              Why Choose Us
+            </Badge>
+            <h2 className="text-h2 text-gray-900 mb-6">The Orange County Difference</h2>
             <p className="text-body text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference of true in-house processing at Orange County's premier printing shop
+              Experience professional photo printing with cutting-edge technology and personalized service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Clock className="w-10 h-10 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Feature 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-h5 text-gray-900 mb-3">Lightning Fast Turnaround</h3>
+                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                    Order by 2PM and pick up the same day by 5PM. No more waiting weeks for your precious memories.
+                  </p>
+                  <div className="flex items-center text-emerald-600 font-medium text-sm">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Same-day guarantee
+                  </div>
+                </div>
               </div>
-              <h3 className="text-h4 text-gray-900 mb-3">Same Day Pickup</h3>
-              <p className="text-body text-gray-600 leading-relaxed">
-                Order by 2PM, ready by 5PM. No waiting days for your prints.
-              </p>
             </div>
 
-            <div className="text-center group">
-                             <div className="w-20 h-20 bg-gradient-to-br from-[#2384C7] to-[#1D65B7] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Zap className="w-10 h-10 text-white" />
+            {/* Feature 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-h5 text-gray-900 mb-3">Professional In-House Processing</h3>
+                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                    State-of-the-art equipment and expert technicians ensure every print meets gallery standards.
+                  </p>
+                  <div className="flex items-center text-blue-600 font-medium text-sm">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Professional equipment
+                  </div>
+                </div>
               </div>
-              <h3 className="text-h4 text-gray-900 mb-3">In-House Processing</h3>
-              <p className="text-body text-gray-600 leading-relaxed">All printing done on-site with professional equipment.</p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <DollarSign className="w-10 h-10 text-white" />
+            {/* Feature 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <DollarSign className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-h5 text-gray-900 mb-3">Unbeatable Value</h3>
+                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                    Premium quality at competitive prices with bulk discounts. Professional results, affordable pricing.
+                  </p>
+                  <div className="flex items-center text-purple-600 font-medium text-sm">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Volume discounts available
+                  </div>
+                </div>
               </div>
-              <h3 className="text-h4 text-gray-900 mb-3">Best Prices</h3>
-              <p className="text-body text-gray-600 leading-relaxed">Competitive rates with bulk discounts available.</p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Shield className="w-10 h-10 text-white" />
+            {/* Feature 4 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-h5 text-gray-900 mb-3">Satisfaction Guaranteed</h3>
+                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                    Not happy with your prints? We'll reprint them for free or provide a full refund. Your satisfaction is our priority.
+                  </p>
+                  <div className="flex items-center text-red-600 font-medium text-sm">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    100% money-back guarantee
+                  </div>
+                </div>
               </div>
-              <h3 className="text-h4 text-gray-900 mb-3">100% Guarantee</h3>
-              <p className="text-body text-gray-600 leading-relaxed">
-                Complete satisfaction guaranteed or we'll reprint for free.
-              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-[#2563EB] to-[#3B82F6] rounded-2xl p-8 text-white shadow-xl">
+              <h3 className="text-h4 mb-4">Ready to Experience the Difference?</h3>
+              <p className="text-lg opacity-95 mb-6">Join thousands of satisfied customers who trust us with their memories</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
+                >
+                  <Upload className="w-5 h-5 mr-3" />
+                  Start Your Order
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300"
+                  onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
+                >
+                  <Phone className="w-5 h-5 mr-3" />
+                  Get Quote
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -602,7 +672,7 @@ export default function PhotoPrintingPage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-600" />
-                  <span className="font-semibold text-gray-900">50,000+ Photos Printed</span>
+                  <span className="font-semibold text-gray-900">Trusted by Families</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-600" />
@@ -789,7 +859,7 @@ export default function PhotoPrintingPage() {
           <div className="text-center mb-16">
             <h2 id="sources-heading" className="text-h2 text-gray-900 mb-6">We Print From Any Digital Source</h2>
             <p className="text-body text-xl text-gray-600">Bring your photos from anywhere - our copy shop handles them all</p>
-                         <Badge className="mt-4 bg-green-100 text-green-800 text-base px-4 py-2 font-medium rounded-full">
+                         <Badge className="mt-4 bg-green-100 text-green-800 text-base px-4 py-2 font-medium rounded-full hover:bg-green-200 hover:text-green-900 transition-colors duration-300">
                <Upload className="w-4 h-4 mr-2 inline" />
                All Formats Accepted
              </Badge>
@@ -801,14 +871,14 @@ export default function PhotoPrintingPage() {
                return (
                  <Card
                    key={index}
-                   className="text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-lg"
+                   className="text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-lg hover:border-green-300"
                  >
-                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                     <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
+                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:from-green-500 group-hover:to-green-600 transition-all duration-300">
+                     <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:text-white transition-colors duration-300" />
                    </div>
-                  <h3 className="font-semibold text-xs sm:text-sm mb-1 sm:mb-2 text-gray-900">{source.title}</h3>
+                  <h3 className="font-semibold text-xs sm:text-sm mb-1 sm:mb-2 text-gray-900 group-hover:text-green-900 transition-colors duration-300">{source.title}</h3>
                                      <p className="text-xs text-gray-600 mb-2">{source.desc}</p>
-                   <p className="text-xs text-blue-600 font-medium">{source.formats}</p>
+                   <p className="text-xs text-green-600 font-medium">{source.formats}</p>
                 </Card>
               )
             })}
@@ -820,8 +890,8 @@ export default function PhotoPrintingPage() {
       <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="services-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Complete Print Shop Services</h2>
-            <p className="text-xl text-gray-600 mb-4">More than just photo printing - we're your full-service copy shop</p>
+            <h2 id="services-heading" className="text-h2 text-gray-900 mb-6">Complete Print Shop Services</h2>
+            <p className="text-body text-xl text-gray-600 mb-4">More than just photo printing - we're your full-service copy shop</p>
             <div className="flex flex-wrap gap-2 justify-center">
               <Badge className="bg-purple-100 text-purple-800 text-sm px-3 py-1 font-medium rounded-full">
                 Same Day Available
@@ -879,14 +949,14 @@ export default function PhotoPrintingPage() {
                   const IconComponent = service.icon
                   return (
                     <div key={index} className="flex-shrink-0 px-2" style={{ width: `${100 / itemsVisible}%` }}>
-                      <Card className="h-full text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-lg">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:from-purple-500 group-hover:to-purple-600 transition-all duration-300">
-                          <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600 group-hover:text-white transition-colors duration-300" />
+                      <Card className="h-full text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-xl hover:border-blue-300">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:from-blue-500 group-hover:to-blue-600 transition-all duration-300 shadow-sm group-hover:shadow-md">
+                          <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
                         </div>
-                        <h3 className="font-semibold text-sm sm:text-base mb-2 text-gray-900">{service.title}</h3>
+                        <h3 className="font-semibold text-sm sm:text-base mb-2 text-gray-900 group-hover:text-blue-900 transition-colors duration-300">{service.title}</h3>
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3">{service.desc}</p>
                         <div className="mt-auto space-y-2">
-                          <div className="text-sm font-semibold text-green-600">{service.price}</div>
+                          <div className="text-sm font-bold text-emerald-600">{service.price}</div>
                           <div className="flex items-center justify-center text-xs text-gray-500">
                             <Clock className="w-3 h-3 mr-1" />
                             {service.turnaround}

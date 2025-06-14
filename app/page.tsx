@@ -457,27 +457,27 @@ export default function PhotoPrintingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar with Trust Indicators */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200 py-3 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2">
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-green-600" />
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200 py-2 sm:py-3 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" />
               <span className="font-semibold text-gray-800">100% Satisfaction Guaranteed</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-blue-600" />
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Building2 className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
               <span className="font-semibold text-gray-800">Two Convenient Locations</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-purple-600" />
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
               <span className="font-semibold text-gray-800">Same Day Service Available</span>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
-            <Button size="sm" variant="outline" className="text-xs font-medium border-blue-300 hover:bg-blue-50">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <Button size="sm" variant="outline" className="text-xs font-medium border-blue-300 hover:bg-blue-50 px-3 py-1.5 min-h-[36px]">
               Get Quote
             </Button>
-            <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 text-xs font-medium">
+            <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 text-xs font-medium px-3 py-1.5 min-h-[36px]">
               Upload Photos
             </Button>
           </div>
@@ -487,37 +487,37 @@ export default function PhotoPrintingPage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50 backdrop-blur-md bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center py-4 gap-4">
-            <div className="flex items-center space-x-4">
-                             <div className="w-12 h-12 bg-gradient-to-br from-[#2384C7] to-[#1D65B7] rounded-lg flex items-center justify-center shadow-lg" role="img" aria-label="Laguna Digital Logo">
-                <span className="text-white font-bold text-lg">LD</span>
+          <div className="flex flex-col lg:flex-row justify-between items-center py-3 sm:py-4 gap-3 sm:gap-4">
+            <div className="flex items-center space-x-3 sm:space-x-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#2384C7] to-[#1D65B7] rounded-lg flex items-center justify-center shadow-lg" role="img" aria-label="Laguna Digital Logo">
+                <span className="text-white font-bold text-base sm:text-lg">LD</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">LAGUNA DIGITAL</h1>
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">LAGUNA DIGITAL</h1>
                 <p className="text-xs text-gray-500 font-medium">PRINT • MAIL • DESIGN</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 w-full lg:w-auto">
               <div className="text-center sm:text-right">
                 <div className="text-gray-600 text-sm font-medium">Call Now</div>
                 <a 
                   href="tel:+19494642030" 
-                                     className="font-bold text-xl text-[#2384C7] phone-link hover:text-[#1D65B7] transition-colors"
+                  className="font-bold text-lg sm:text-xl text-[#2384C7] phone-link hover:text-[#1D65B7] transition-colors"
                   aria-label="Call Laguna Digital at 949-464-2030"
                 >
                   949-464-2030
                 </a>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 sm:space-x-3">
                 <Button 
                   size="sm" 
-                  className="bg-green-600 hover:bg-green-700 text-white font-medium focus-ring"
+                  className="bg-green-600 hover:bg-green-700 text-white font-medium focus-ring px-4 py-2 min-h-[40px] text-sm"
                   onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
                 >
                   Order Online
                 </Button>
-                <Button size="sm" variant="outline" className="font-medium focus-ring">
+                <Button size="sm" variant="outline" className="font-medium focus-ring px-4 py-2 min-h-[40px] text-sm">
                   Track Order
                 </Button>
               </div>
@@ -528,60 +528,60 @@ export default function PhotoPrintingPage() {
 
       {/* Hero Banner */}
       <main id="main-content">
-                 <section className="relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] text-white py-12 sm:py-14 lg:py-16" aria-labelledby="hero-heading">
+        <section className="relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] text-white py-8 sm:py-12 md:py-14 lg:py-16" aria-labelledby="hero-heading">
           <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm font-medium px-4 py-2">
+              <Badge className="mb-4 sm:mb-6 bg-white/20 text-white border-white/30 text-xs sm:text-sm font-medium px-3 sm:px-4 py-1.5 sm:py-2">
                 <span role="img" aria-label="Trophy">🏆</span> #1 Rated Print Shop in Orange County
               </Badge>
-              <h1 id="hero-heading" className="text-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+              <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 leading-tight font-jost font-medium">
                 Professional Photo Printing
-                <span className="block text-xl sm:text-2xl md:text-3xl text-blue-200 mt-2 font-light font-jost">
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-200 mt-2 font-light font-jost">
                   Starting at $2.45 • Same Day Service
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl mb-8 opacity-95 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-95 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
                 Transform your digital memories into premium quality prints at Orange County's most trusted printing shop.
                 In-house processing, 15+ paper options, and guaranteed satisfaction.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4 sm:px-0">
                 <Button
                   size="lg"
-                                     className="bg-white text-[#2384C7] hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg shadow-xl focus-ring hover-lift"
+                  className="bg-white text-[#2384C7] hover:bg-gray-100 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
                   onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
                 >
-                  <Upload className="w-5 h-5 mr-3" />
+                  <Upload className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                   Upload & Order Now
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                                     className="border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-lg px-8 py-4 rounded-lg bg-white/10 focus-ring hover-lift"
+                  className="border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white/10 focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
                   onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
                 >
-                  <Phone className="w-5 h-5 mr-3" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                   Get Quote
                 </Button>
               </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 mx-4 sm:mx-0">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">15+ Years</div>
-                <div className="text-sm opacity-90">Experience</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold">15+ Years</div>
+                <div className="text-xs sm:text-sm opacity-90">Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">Same Day</div>
-                <div className="text-sm opacity-90">Service</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold">Same Day</div>
+                <div className="text-xs sm:text-sm opacity-90">Service</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">15+</div>
-                <div className="text-sm opacity-90">Paper Options</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold">15+</div>
+                <div className="text-xs sm:text-sm opacity-90">Paper Options</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">100%</div>
-                <div className="text-sm opacity-90">Guaranteed</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold">100%</div>
+                <div className="text-xs sm:text-sm opacity-90">Guaranteed</div>
               </div>
             </div>
           </div>
@@ -589,29 +589,29 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* Why Choose Us Section - Redesigned */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full border border-orange-200">
               <Award className="w-4 h-4 mr-2 inline" />
               Why Choose Us
             </Badge>
-            <h2 className="text-h2 text-gray-900 mb-6">The Orange County Difference</h2>
-            <p className="text-body text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">The Orange County Difference</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
               Experience professional photo printing with cutting-edge technology and personalized service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-h5 text-gray-900 mb-3">Lightning Fast Turnaround</h3>
-                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Lightning Fast Turnaround</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
                     Order by 2PM and pick up the same day by 5PM. No more waiting weeks for your precious memories.
                   </p>
                   <div className="flex items-center text-emerald-600 font-medium text-sm">
@@ -623,14 +623,14 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-h5 text-gray-900 mb-3">Professional In-House Processing</h3>
-                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Professional In-House Processing</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
                     State-of-the-art equipment and expert technicians ensure every print meets gallery standards.
                   </p>
                   <div className="flex items-center text-blue-600 font-medium text-sm">
@@ -642,14 +642,14 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <DollarSign className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-h5 text-gray-900 mb-3">Unbeatable Value</h3>
-                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Unbeatable Value</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
                     Premium quality at competitive prices with bulk discounts. Professional results, affordable pricing.
                   </p>
                   <div className="flex items-center text-purple-600 font-medium text-sm">
@@ -661,14 +661,14 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-h5 text-gray-900 mb-3">Satisfaction Guaranteed</h3>
-                  <p className="text-body text-gray-600 leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Satisfaction Guaranteed</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
                     Not happy with your prints? We'll reprint them for free or provide a full refund. Your satisfaction is our priority.
                   </p>
                   <div className="flex items-center text-red-600 font-medium text-sm">
@@ -681,28 +681,20 @@ export default function PhotoPrintingPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-[#2563EB] to-[#3B82F6] rounded-2xl p-8 text-white shadow-xl">
-              <h3 className="text-h4 mb-4">Ready to Experience the Difference?</h3>
-              <p className="text-lg opacity-95 mb-6">Join thousands of satisfied customers who trust us with their memories</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
-                >
-                  <Upload className="w-5 h-5 mr-3" />
-                  Start Your Order
-                </Button>
-                <Button
-                  size="lg"
-                  className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300"
-                  onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-3" />
-                  Get Quote
-                </Button>
-              </div>
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 text-center border border-gray-100">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Ready to Experience the Difference?</h3>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              Join thousands of satisfied customers who trust us with their most precious memories
+            </p>
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-6 sm:mb-8">
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900 text-sm sm:text-base px-4 py-2 sm:py-3 font-medium rounded-full transition-colors">
+                <Upload className="w-4 h-4 mr-2 inline" />
+                Easy Online Upload
+              </Badge>
+              <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-sm sm:text-base px-4 py-2 sm:py-3 font-medium rounded-full transition-colors">
+                <Shield className="w-4 h-4 mr-2 inline" />
+                100% Satisfaction Guaranteed
+              </Badge>
             </div>
           </div>
         </div>
@@ -786,163 +778,210 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gray-50" aria-labelledby="pricing-heading">
+      <section id="pricing" className="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="pricing-heading" className="text-h2 text-gray-900 mb-6">Affordable Print Shop Pricing</h2>
-            <p className="text-body text-xl text-gray-600 mb-6">
-              Professional quality prints at the best prices in Orange County
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 id="pricing-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">
+              Professional Photo Printing Prices
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0">
+              Premium quality prints on professional photo paper with same-day service available
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <Badge className="bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900 text-lg px-6 py-3 font-medium rounded-full transition-colors">
-                <CheckCircle className="w-4 h-4 mr-2 inline" />
-                No Hidden Fees • Same Day Service Included
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900 text-sm sm:text-base px-4 py-2 sm:py-3 font-medium rounded-full transition-colors">
+                <Upload className="w-4 h-4 mr-2 inline" />
+                Easy Online Upload
               </Badge>
-              <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-lg px-6 py-3 font-medium rounded-full transition-colors">
+              <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 text-sm sm:text-base px-4 py-2 sm:py-3 font-medium rounded-full transition-colors">
                 <Shield className="w-4 h-4 mr-2 inline" />
                 100% Satisfaction Guaranteed
               </Badge>
             </div>
           </div>
 
+          {/* Mobile-First Responsive Pricing */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-[#0066b4] to-[#044a80] text-white p-8">
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            {/* Header Section */}
+            <div className="bg-gradient-to-r from-[#0066b4] to-[#044a80] text-white p-6 sm:p-8">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-2">Photo Printing Prices</h3>
-                  <p className="opacity-90 text-lg">Premium quality on professional photo paper</p>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Photo Printing Prices</h3>
+                  <p className="opacity-90 text-base sm:text-lg">Premium quality on professional photo paper</p>
                 </div>
                 <div className="text-center sm:text-right">
-                  <div className="text-3xl sm:text-4xl font-bold">$2.45</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">$2.45</div>
                   <div className="text-sm opacity-90">Starting Price</div>
                 </div>
               </div>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full" role="table" aria-label="Photo printing prices">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-4 sm:px-6 py-4 text-left font-semibold text-gray-900">Size</th>
-                    <th scope="col" className="px-4 sm:px-6 py-4 text-left font-semibold text-gray-900">Price</th>
-                    <th scope="col" className="px-4 sm:px-6 py-4 text-left font-semibold text-gray-900">Paper Type</th>
-                    <th scope="col" className="px-4 sm:px-6 py-4 text-left font-semibold text-gray-900 hidden sm:table-cell">Description</th>
-                    <th scope="col" className="px-4 sm:px-6 py-4 text-center font-semibold text-gray-900">Order</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100">
-                  {pricingData.map((item, index) => (
-                    <tr
-                      key={index}
-                      className={`hover:bg-gray-50 transition-colors duration-200 ${item.popular ? "bg-blue-50 border-l-4 border-blue-500" : ""}`}
-                    >
-                      <td className="px-4 sm:px-6 py-4">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+            {/* Desktop Table View - Hidden on Mobile */}
+            <div className="hidden md:block">
+              <div className="overflow-x-auto">
+                <table className="w-full" role="table" aria-label="Photo printing prices">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th scope="col" className="px-4 lg:px-6 py-4 text-left font-semibold text-gray-900 text-sm lg:text-base">Size</th>
+                      <th scope="col" className="px-4 lg:px-6 py-4 text-left font-semibold text-gray-900 text-sm lg:text-base">Price</th>
+                      <th scope="col" className="px-4 lg:px-6 py-4 text-left font-semibold text-gray-900 text-sm lg:text-base">Paper Type</th>
+                      <th scope="col" className="px-4 lg:px-6 py-4 text-left font-semibold text-gray-900 text-sm lg:text-base">Description</th>
+                      <th scope="col" className="px-4 lg:px-6 py-4 text-center font-semibold text-gray-900 text-sm lg:text-base">Order</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {pricingData.map((item, index) => (
+                      <tr
+                        key={index}
+                        className={`hover:bg-gray-50 transition-colors duration-200 ${item.popular ? "bg-blue-50 border-l-4 border-blue-500" : ""}`}
+                      >
+                        <td className="px-4 lg:px-6 py-4">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-lg text-gray-900">{item.size}"</span>
+                            {item.popular && (
+                              <Badge className="bg-blue-100 text-blue-800 text-xs">
+                                <Star className="w-3 h-3 mr-1 inline" />
+                                Most Popular
+                              </Badge>
+                            )}
+                          </div>
+                        </td>
+                        <td className="px-4 lg:px-6 py-4">
+                          <div className="text-xl font-bold text-green-600">${item.price}</div>
+                          <div className="text-sm text-gray-500">per print</div>
+                        </td>
+                        <td className="px-4 lg:px-6 py-4 text-gray-700">{item.paper}</td>
+                        <td className="px-4 lg:px-6 py-4 text-gray-600 text-sm">{item.description}</td>
+                        <td className="px-4 lg:px-6 py-4 text-center">
+                          <Button
+                            size="sm"
+                            className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-medium px-4 py-2 rounded focus-ring hover-lift min-h-[36px] text-sm"
+                            onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
+                            aria-label={`Order ${item.size} inch prints for $${item.price} each`}
+                          >
+                            Order Now
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Mobile Card View - Visible on Mobile Only */}
+            <div className="md:hidden">
+              <div className="divide-y divide-gray-100">
+                {pricingData.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`p-4 hover:bg-gray-50 transition-colors duration-200 ${item.popular ? "bg-blue-50 border-l-4 border-blue-500" : ""}`}
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
                           <span className="font-bold text-lg text-gray-900">{item.size}"</span>
                           {item.popular && (
-                            <Badge className="bg-blue-100 text-blue-800 text-xs w-fit">
+                            <Badge className="bg-blue-100 text-blue-800 text-xs">
                               <Star className="w-3 h-3 mr-1 inline" />
-                              Most Popular
+                              Popular
                             </Badge>
                           )}
                         </div>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4">
+                        <div className="text-sm text-gray-600">{item.paper}</div>
+                      </div>
+                      <div className="text-right">
                         <div className="text-xl font-bold text-green-600">${item.price}</div>
-                        <div className="text-sm text-gray-500">per print</div>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 text-gray-700">{item.paper}</td>
-                      <td className="px-4 sm:px-6 py-4 text-gray-600 text-sm hidden sm:table-cell">{item.description}</td>
-                      <td className="px-4 sm:px-6 py-4 text-center">
-                        <Button
-                          size="sm"
-                                                     className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-medium px-4 py-2 rounded focus-ring hover-lift"
-                          onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
-                          aria-label={`Order ${item.size} inch prints for $${item.price} each`}
-                        >
-                          Order Now
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                        <div className="text-xs text-gray-500">per print</div>
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-600 mb-3">{item.description}</div>
+                    <Button
+                      size="sm"
+                      className="w-full bg-[#2384C7] hover:bg-[#1D65B7] text-white font-medium py-2 rounded focus-ring hover-lift min-h-[44px] text-sm"
+                      onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
+                      aria-label={`Order ${item.size} inch prints for $${item.price} each`}
+                    >
+                      Order {item.size}" Prints - ${item.price} each
+                    </Button>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 sm:p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">10%</div>
-                    <div className="text-sm text-gray-600">50+ prints</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">15%</div>
-                    <div className="text-sm text-gray-600">100+ prints</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">20%</div>
-                    <div className="text-sm text-gray-600">500+ prints</div>
-                  </div>
+          <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-4 sm:p-6 lg:p-8 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">10%</div>
+                  <div className="text-xs sm:text-sm text-gray-600">50+ prints</div>
                 </div>
               </div>
-              <p className="text-gray-700 mb-6 text-lg font-semibold">
-                <Award className="w-5 h-5 mr-2 inline text-yellow-600" />
-                Volume Discounts Available - The More You Print, The More You Save!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                                     className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-semibold px-8 py-4 rounded-lg focus-ring hover-lift"
-                  onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
-                >
-                  <Upload className="w-5 h-5 mr-3" />
-                  Upload Photos Now
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="font-semibold px-8 py-4 rounded-lg focus-ring hover-lift"
-                  onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-3" />
-                  Get Custom Quote
-                </Button>
+              <div className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">15%</div>
+                  <div className="text-xs sm:text-sm text-gray-600">100+ prints</div>
+                </div>
               </div>
+              <div className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">20%</div>
+                  <div className="text-xs sm:text-sm text-gray-600">500+ prints</div>
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4 sm:mb-6 text-base sm:text-lg font-semibold">
+              <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2 inline text-yellow-600" />
+              Volume Discounts Available - The More You Print, The More You Save!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg focus-ring hover-lift min-h-[48px] text-sm sm:text-base"
+                onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
+              >
+                <Upload className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                Upload Photos Now
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg focus-ring hover-lift min-h-[48px] text-sm sm:text-base"
+                onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
+              >
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                Get Custom Quote
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Digital Sources Section */}
-      <section className="py-20" aria-labelledby="sources-heading">
+      <section className="py-12 sm:py-16 lg:py-20" aria-labelledby="sources-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="sources-heading" className="text-h2 text-gray-900 mb-6">We Print From Any Digital Source</h2>
-            <p className="text-body text-xl text-gray-600">Bring your photos from anywhere - our copy shop handles them all</p>
-                         <Badge className="mt-4 bg-green-100 text-green-800 text-base px-4 py-2 font-medium rounded-full hover:bg-green-200 hover:text-green-900 transition-colors duration-300">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 id="sources-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">We Print From Any Digital Source</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 px-4 sm:px-0">Bring your photos from anywhere - our copy shop handles them all</p>
+            <Badge className="mt-4 bg-green-100 text-green-800 text-sm sm:text-base px-4 py-2 font-medium rounded-full hover:bg-green-200 hover:text-green-900 transition-colors duration-300">
                <Upload className="w-4 h-4 mr-2 inline" />
                All Formats Accepted
              </Badge>
            </div>
 
-           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
              {digitalSources.map((source, index) => {
                const IconComponent = source.icon
                return (
                  <Card
                    key={index}
-                   className="text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-lg hover:border-green-300"
+                   className="text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-3 sm:p-4 lg:p-6 group hover:shadow-lg hover:border-green-300"
                  >
-                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:from-green-500 group-hover:to-green-600 transition-all duration-300">
-                     <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:text-white transition-colors duration-300" />
+                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4 group-hover:from-green-500 group-hover:to-green-600 transition-all duration-300">
+                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-green-600 group-hover:text-white transition-colors duration-300" />
                    </div>
                   <h3 className="font-semibold text-xs sm:text-sm mb-1 sm:mb-2 text-gray-900 group-hover:text-green-900 transition-colors duration-300">{source.title}</h3>
-                                     <p className="text-xs text-gray-600 mb-2">{source.desc}</p>
+                  <p className="text-xs text-gray-600 mb-1 sm:mb-2">{source.desc}</p>
                    <p className="text-xs text-green-600 font-medium">{source.formats}</p>
                 </Card>
               )
@@ -952,11 +991,11 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* Additional Services Slider */}
-      <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="services-heading" className="text-h2 text-gray-900 mb-6">Complete Print Shop Services</h2>
-            <p className="text-body text-xl text-gray-600 mb-4">More than just photo printing - we're your full-service copy shop</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 id="services-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">Complete Print Shop Services</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 px-4 sm:px-0">More than just photo printing - we're your full-service copy shop</p>
             <div className="flex flex-wrap gap-2 justify-center">
               <Badge className="bg-purple-100 text-purple-800 text-sm px-3 py-1 font-medium rounded-full">
                 Same Day Available
@@ -971,24 +1010,24 @@ export default function PhotoPrintingPage() {
           </div>
 
           <div className="relative">
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-6 sm:mb-8">
               <Button
                 variant="outline"
                 size="lg"
                 onClick={prevSlide}
                 disabled={currentSlide === 0}
-                className="rounded-full w-12 h-12 p-0 disabled:opacity-50"
+                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 disabled:opacity-50 min-h-[40px] sm:min-h-[48px]"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </Button>
 
-                             <div className="flex space-x-2">
+              <div className="flex space-x-1 sm:space-x-2">
                  {Array.from({ length: maxSlides + 1 }).map((_, index) => (
                    <button
                      key={index}
                      onClick={() => setCurrentSlide(index)}
                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                       index === currentSlide ? "bg-blue-500 w-8" : "bg-gray-300"
+                       index === currentSlide ? "bg-blue-500 w-6 sm:w-8" : "bg-gray-300"
                      }`}
                    />
                  ))}
@@ -998,10 +1037,10 @@ export default function PhotoPrintingPage() {
                 variant="outline"
                 size="lg"
                 onClick={nextSlide}
-                disabled={currentSlide === maxSlides}
-                className="rounded-full w-12 h-12 p-0 disabled:opacity-50"
+                disabled={currentSlide >= maxSlides}
+                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 disabled:opacity-50 min-h-[40px] sm:min-h-[48px]"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </Button>
             </div>
 
@@ -1041,11 +1080,15 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50" aria-labelledby="testimonials-heading">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">What Our Customers Say About Laguna Digital</h2>
-            <p className="text-xl text-gray-600">Trusted by businesses, artists, and individuals for top-quality printing. See why our clients love us!</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 id="testimonials-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">
+              What Our Customers Say About Laguna Digital
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+              Trusted by businesses, artists, and individuals for top-quality printing. See why our clients love us!
+            </p>
           </div>
 
           {/* Testimonials Carousel */}
@@ -1056,27 +1099,27 @@ export default function PhotoPrintingPage() {
                 style={{ transform: `translateX(-${testimonialsCurrentSlide * (100 / testimonialsItemsVisible)}%)` }}
               >
                 {testimonialsData.map((testimonial, index) => (
-                  <div key={index} className={`flex-shrink-0 px-4 ${testimonialsItemsVisible === 1 ? 'w-full' : testimonialsItemsVisible === 2 ? 'w-1/2' : 'w-1/3'}`}>
-                    <Card className="p-6 hover-lift transition-all duration-300 border-0 shadow-lg h-full">
-                      <div className="flex items-center mb-4">
+                  <div key={index} className={`flex-shrink-0 px-2 sm:px-4 ${testimonialsItemsVisible === 1 ? 'w-full' : testimonialsItemsVisible === 2 ? 'w-1/2' : 'w-1/3'}`}>
+                    <Card className="p-4 sm:p-6 hover-lift transition-all duration-300 border-0 shadow-lg h-full">
+                      <div className="flex items-center mb-3 sm:mb-4">
                         <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-current" />
+                            <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                           ))}
                         </div>
                       </div>
-                      <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                      <p className="text-gray-700 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                         "{testimonial.text}"
                       </p>
                       <div className="flex items-center mt-auto">
                         <img 
                           src={testimonial.image} 
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full object-cover mr-4"
+                          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
                         />
                         <div>
-                          <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                          <div className="text-sm text-gray-500">{testimonial.title}</div>
+                          <div className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</div>
+                          <div className="text-xs sm:text-sm text-gray-500">{testimonial.title}</div>
                         </div>
                       </div>
                     </Card>
@@ -1085,29 +1128,29 @@ export default function PhotoPrintingPage() {
               </div>
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Mobile Optimized */}
             <button
               onClick={prevTestimonialsSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px]"
               aria-label="Previous testimonials"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
             <button
               onClick={nextTestimonialsSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px]"
               aria-label="Next testimonials"
             >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
 
             {/* Dots Indicator */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-6 sm:mt-8 space-x-1 sm:space-x-2">
               {Array.from({ length: maxTestimonialsSlides + 1 }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setTestimonialsCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center ${
                     index === testimonialsCurrentSlide 
                       ? 'bg-blue-600 scale-110' 
                       : 'bg-gray-300 hover:bg-gray-400'
@@ -1116,45 +1159,43 @@ export default function PhotoPrintingPage() {
                 />
               ))}
             </div>
-            
-            
           </div>
 
-          <div className="text-center mt-12">
-            <div className="flex items-center justify-center space-x-4 mb-6">
+          <div className="text-center mt-8 sm:mt-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
               <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-current" />
+                  <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-gray-900">4.9/5</span>
-              <span className="text-gray-600">(500+ Reviews)</span>
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">4.9/5</span>
+              <span className="text-gray-600 text-sm sm:text-base">(500+ Reviews)</span>
             </div>
-            <p className="text-lg text-gray-700">Join thousands of satisfied customers across Orange County</p>
+            <p className="text-base sm:text-lg text-gray-700 px-4 sm:px-0">Join thousands of satisfied customers across Orange County</p>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50" aria-labelledby="faq-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Common questions about our printing shop and copy shop services</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 id="faq-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">Frequently Asked Questions</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 px-4 sm:px-0">Common questions about our printing shop and copy shop services</p>
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-3 sm:space-y-4">
             {faqData.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
                 className="bg-white border border-gray-200 rounded-lg shadow-sm hover-lift"
               >
-                <AccordionTrigger className="px-6 py-6 text-left hover:no-underline hover:bg-gray-50 rounded-t-lg">
-                  <h3 className="font-semibold text-gray-900 pr-4 text-base sm:text-lg">{faq.question}</h3>
+                <AccordionTrigger className="px-4 sm:px-6 py-4 sm:py-6 text-left hover:no-underline hover:bg-gray-50 rounded-t-lg min-h-[56px]">
+                  <h3 className="font-semibold text-gray-900 pr-4 text-sm sm:text-base lg:text-lg text-left">{faq.question}</h3>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <AccordionContent className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -1163,38 +1204,38 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* CTA Section */}
-             <section id="upload-section" className="py-20 bg-gradient-to-br from-[#2384C7] via-[#1D65B7] to-[#0C3A84] text-white" aria-labelledby="cta-heading">
+      <section id="upload-section" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-[#2384C7] via-[#1D65B7] to-[#0C3A84] text-white" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 id="cta-heading" className="text-3xl sm:text-4xl font-bold mb-6">Ready to Print Your Photos?</h2>
-          <p className="text-xl mb-12 opacity-95 leading-relaxed">
+          <h2 id="cta-heading" className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium mb-4 sm:mb-6">Ready to Print Your Photos?</h2>
+          <p className="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 opacity-95 leading-relaxed px-4 sm:px-0">
             Join thousands of satisfied customers who trust Orange County's premier printing shop
           </p>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 sm:p-10 border border-white/20 hover-lift">
-            <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-8" role="img" aria-label="Upload icon">
-              <Upload className="w-10 h-10" />
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/20 hover-lift">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8" role="img" aria-label="Upload icon">
+              <Upload className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Upload Photos • Same Day Pickup</h3>
-            <p className="mb-8 opacity-95 text-lg">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Upload Photos • Same Day Pickup</h3>
+            <p className="mb-6 sm:mb-8 opacity-95 text-base sm:text-lg px-4 sm:px-0">
               Easy online ordering with pickup at either of our convenient Orange County locations
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
                 size="lg"
-                                 className="bg-white text-[#2384C7] hover:bg-gray-100 text-lg font-semibold px-8 py-4 rounded-lg focus-ring hover-lift"
+                className="bg-white text-[#2384C7] hover:bg-gray-100 text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
                 onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
                 aria-label="Upload photos and place order online"
               >
-                <FileImage className="w-5 h-5 mr-3" />
+                <FileImage className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Upload Photos Now
               </Button>
               <Button
                 size="lg"
-                className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-lg font-semibold px-8 py-4 rounded-lg focus-ring hover-lift"
+                className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
                 onClick={() => window.open('tel:+19494642030')}
                 aria-label="Call Laguna Digital for a quote"
               >
-                <Phone className="w-5 h-5 mr-3" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Call 949-464-2030
               </Button>
             </div>
@@ -1203,23 +1244,23 @@ export default function PhotoPrintingPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50">
+      <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Visit Our Print Shop Locations</h2>
-            <p className="text-xl text-gray-600">Two convenient locations serving all of Orange County</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">Visit Our Print Shop Locations</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 px-4 sm:px-0">Two convenient locations serving all of Orange County</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
             <Card className="text-center border-0 shadow-lg rounded-2xl overflow-hidden">
-              <CardHeader className="bg-gradient-to-br from-blue-50 to-blue-100 p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="w-8 h-8 text-white" />
+              <CardHeader className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-gray-900">Laguna Beach Print Shop</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900">Laguna Beach Print Shop</CardTitle>
               </CardHeader>
-              <CardContent className="p-8 space-y-6">
-                <div className="text-gray-600 text-lg">
+              <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
+                <div className="text-gray-600 text-base sm:text-lg">
                   <p className="font-semibold">123 Main Street</p>
                   <p>Laguna Beach, CA 92651</p>
                   <p className="text-sm text-gray-500 mt-2">(Near Whole Foods Market)</p>
@@ -1241,7 +1282,7 @@ export default function PhotoPrintingPage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Button 
                     variant="outline" 
-                    className="font-semibold focus-ring hover-lift"
+                    className="font-semibold focus-ring hover-lift min-h-[44px] text-sm sm:text-base"
                     onClick={() => window.open('https://maps.google.com/?q=123+Main+Street+Laguna+Beach+CA+92651')}
                     aria-label="Get directions to Laguna Beach location"
                   >
@@ -1249,7 +1290,7 @@ export default function PhotoPrintingPage() {
                     Get Directions
                   </Button>
                   <Button 
-                                         className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-semibold focus-ring hover-lift"
+                    className="bg-[#2384C7] hover:bg-[#1D65B7] text-white font-semibold focus-ring hover-lift min-h-[44px] text-sm sm:text-base"
                     onClick={() => window.open('tel:+19494642030')}
                     aria-label="Call Laguna Beach location"
                   >
@@ -1261,14 +1302,14 @@ export default function PhotoPrintingPage() {
             </Card>
 
             <Card className="text-center border-0 shadow-lg rounded-2xl overflow-hidden">
-              <CardHeader className="bg-gradient-to-br from-purple-50 to-purple-100 p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="w-8 h-8 text-white" />
+              <CardHeader className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-gray-900">Irvine Print Shop</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900">Irvine Print Shop</CardTitle>
               </CardHeader>
-              <CardContent className="p-8 space-y-6">
-                <div className="text-gray-600 text-lg">
+              <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
+                <div className="text-gray-600 text-base sm:text-lg">
                   <p className="font-semibold">456 Business Center Drive</p>
                   <p>Irvine, CA 92618</p>
                   <p className="text-sm text-gray-500 mt-2">(Irvine Business District)</p>
@@ -1290,7 +1331,7 @@ export default function PhotoPrintingPage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Button 
                     variant="outline" 
-                    className="font-semibold focus-ring hover-lift"
+                    className="font-semibold focus-ring hover-lift min-h-[44px] text-sm sm:text-base"
                     onClick={() => window.open('https://maps.google.com/?q=456+Business+Center+Drive+Irvine+CA+92618')}
                     aria-label="Get directions to Irvine location"
                   >
@@ -1298,7 +1339,7 @@ export default function PhotoPrintingPage() {
                     Get Directions
                   </Button>
                   <Button 
-                    className="bg-purple-600 hover:bg-purple-700 text-white font-semibold focus-ring hover-lift"
+                    className="bg-purple-600 hover:bg-purple-700 text-white font-semibold focus-ring hover-lift min-h-[44px] text-sm sm:text-base"
                     onClick={() => window.open('tel:+19495550123')}
                     aria-label="Call Irvine location"
                   >
@@ -1315,37 +1356,37 @@ export default function PhotoPrintingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16" role="contentinfo">
+      <footer className="bg-gray-900 text-white py-12 sm:py-16" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center" role="img" aria-label="Laguna Digital Logo">
-                  <span className="text-white font-bold">LD</span>
+              <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center" role="img" aria-label="Laguna Digital Logo">
+                  <span className="text-white font-bold text-sm sm:text-base">LD</span>
                 </div>
-                <span className="text-xl font-bold">LAGUNA DIGITAL</span>
+                <span className="text-lg sm:text-xl font-bold">LAGUNA DIGITAL</span>
               </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-400 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Orange County's premier printing shop and copy shop serving Laguna Beach, Irvine, and surrounding areas
                 since 2008.
               </p>
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center space-x-2 mb-3 sm:mb-4">
                 <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
+                    <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-400">4.9/5 (500+ Reviews)</span>
+                <span className="text-xs sm:text-sm text-gray-400">4.9/5 (500+ Reviews)</span>
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-xs sm:text-sm text-gray-400 space-y-1">
                 <p>📧 info@lagunadigital.com</p>
                 <p>⏰ Mon-Fri: 9AM-6PM | Sat: 10AM-4PM</p>
               </div>
             </div>
 
             <div>
-              <h3 className="font-bold mb-6 text-lg">Print Shop Services</h3>
-              <ul className="space-y-3 text-gray-400">
+              <h3 className="font-bold mb-4 sm:mb-6 text-base sm:text-lg">Print Shop Services</h3>
+              <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     Photo Printing
@@ -1375,8 +1416,8 @@ export default function PhotoPrintingPage() {
             </div>
 
             <div>
-              <h3 className="font-bold mb-6 text-lg">Quick Links</h3>
-              <ul className="space-y-3 text-gray-400">
+              <h3 className="font-bold mb-4 sm:mb-6 text-base sm:text-lg">Quick Links</h3>
+              <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
                 <li>
                   <a href="#pricing" className="hover:text-white transition-colors">
                     Pricing
@@ -1406,14 +1447,14 @@ export default function PhotoPrintingPage() {
             </div>
 
             <div>
-              <h3 className="font-bold mb-6 text-lg">Our Locations</h3>
-              <div className="space-y-4 text-gray-400">
+              <h3 className="font-bold mb-4 sm:mb-6 text-base sm:text-lg">Our Locations</h3>
+              <div className="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
                 <div>
                   <div className="font-semibold text-white">Laguna Beach</div>
                   <div className="text-sm">123 Main St, CA 92651</div>
                   <a 
                     href="tel:+19494642030" 
-                    className="text-sm phone-link text-blue-400 hover:text-blue-300"
+                    className="text-sm phone-link text-blue-400 hover:text-blue-300 min-h-[24px] inline-block"
                     aria-label="Call Laguna Beach location"
                   >
                     949-464-2030
@@ -1424,7 +1465,7 @@ export default function PhotoPrintingPage() {
                   <div className="text-sm">456 Business Center Dr, CA 92618</div>
                   <a 
                     href="tel:+19495550123" 
-                    className="text-sm phone-link text-blue-400 hover:text-blue-300"
+                    className="text-sm phone-link text-blue-400 hover:text-blue-300 min-h-[24px] inline-block"
                     aria-label="Call Irvine location"
                   >
                     949-555-0123
@@ -1434,8 +1475,8 @@ export default function PhotoPrintingPage() {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p className="text-sm">
+          <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400">
+            <p className="text-xs sm:text-sm leading-relaxed">
               &copy; 2024 Laguna Digital. All rights reserved. | Printing Shop Orange County | Copy Shop Laguna Beach |
               Same Day Print Shop Irvine | Affordable Print Shop Near Me | High Quality Print Shop
             </p>

@@ -50,7 +50,41 @@ import { useState, useEffect, useRef } from "react"
 export default function PhotoPrintingPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [testimonialsCurrentSlide, setTestimonialsCurrentSlide] = useState(0)
   const sliderRef = useRef<HTMLDivElement>(null)
+
+  const testimonialsData = [
+    {
+      name: "Robert Fox",
+      title: "Founder & CEO, Strong Insights",
+      text: "Laguna Digital is hands down the best printing company I've worked with! I recently had business cards and brochures printed, and the quality was outstanding. The colors were vibrant, and the paper felt premium. Their team was super helpful, ensuring my designs were perfect before printing. Highly recommended!",
+      image: "https://printspace.harutheme.com/packaging/wp-content/uploads/2023/07/testi-avatar-1.jpg"
+    },
+    {
+      name: "Jacob Jones",
+      title: "Head of Design at Zazoo",
+      text: "I needed a batch of flyers and postcards printed urgently for an event, and Laguna Digital delivered on time with flawless results. Their customer service was professional, and they made the entire process smooth and stress-free. Will definitely use them again!",
+      image: "https://printspace.harutheme.com/packaging/wp-content/uploads/2023/07/testi-avatar-2.jpg"
+    },
+    {
+      name: "Alex Sandro",
+      title: "Artist & Creative Professional",
+      text: "As an artist, finding a reliable printer for art reproduction is crucial, and Laguna Digital exceeded my expectations. The prints were true to color, and the attention to detail was impressive. They perfectly captured the essence of my artwork. Highly recommend for artists looking for top-tier printing!",
+      image: "https://printspace.harutheme.com/packaging/wp-content/uploads/2023/07/testi-avatar-3.jpg"
+    },
+    {
+      name: "Jennifer C.",
+      title: "Head of Design at Aveni",
+      text: "Our company has been using Laguna Digital for all our marketing materials, including brochures, rack cards, and posters. Their printing is always sharp, colors are consistent, and their team is great at handling bulk orders efficiently. Great pricing and top-quality service!",
+      image: "https://printspace.harutheme.com/packaging/wp-content/uploads/2023/07/testi-avatar-4.jpg"
+    },
+    {
+      name: "Alex Sandro",
+      title: "Founder & CEO, Strong Insights",
+      text: "I ordered an aluminum sign and a PVC sign for my storefront, and they turned out fantastic! The durability and print quality are top-notch, and the colors don't fade even after months of outdoor exposure. Laguna Digital is my go-to for signage!",
+      image: "https://printspace.harutheme.com/packaging/wp-content/uploads/2023/07/testi-avatar-5.jpg"
+    }
+  ]
 
   const pricingData = [
     { 
@@ -378,6 +412,37 @@ export default function PhotoPrintingPage() {
   const prevSlide = () => {
     setIsAutoPlaying(false)
     setCurrentSlide((prev) => (prev <= 0 ? maxSlides : prev - 1))
+  }
+
+  // Testimonials carousel functions
+  const getTestimonialsItemsPerSlide = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 640) return 1
+      if (window.innerWidth < 1024) return 2
+      return 3
+    }
+    return 3
+  }
+
+  const [testimonialsItemsVisible, setTestimonialsItemsVisible] = useState(getTestimonialsItemsPerSlide())
+
+  useEffect(() => {
+    const handleTestimonialsResize = () => {
+      setTestimonialsItemsVisible(getTestimonialsItemsPerSlide())
+    }
+
+    window.addEventListener("resize", handleTestimonialsResize)
+    return () => window.removeEventListener("resize", handleTestimonialsResize)
+  }, [])
+
+  const maxTestimonialsSlides = Math.max(0, testimonialsData.length - testimonialsItemsVisible)
+
+  const nextTestimonialsSlide = () => {
+    setTestimonialsCurrentSlide((prev) => (prev >= maxTestimonialsSlides ? 0 : prev + 1))
+  }
+
+  const prevTestimonialsSlide = () => {
+    setTestimonialsCurrentSlide((prev) => (prev <= 0 ? maxTestimonialsSlides : prev - 1))
   }
 
   useEffect(() => {
@@ -979,76 +1044,80 @@ export default function PhotoPrintingPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-600">Trusted by thousands across Orange County</p>
+            <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">What Our Customers Say About Laguna Digital</h2>
+            <p className="text-xl text-gray-600">Trusted by businesses, artists, and individuals for top-quality printing. See why our clients love us!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6 hover-lift transition-all duration-300 border-0 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
+          {/* Testimonials Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${testimonialsCurrentSlide * (100 / testimonialsItemsVisible)}%)` }}
+              >
+                {testimonialsData.map((testimonial, index) => (
+                  <div key={index} className={`flex-shrink-0 px-4 ${testimonialsItemsVisible === 1 ? 'w-full' : testimonialsItemsVisible === 2 ? 'w-1/2' : 'w-1/3'}`}>
+                    <Card className="p-6 hover-lift transition-all duration-300 border-0 shadow-lg h-full">
+                      <div className="flex items-center mb-4">
+                        <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 fill-current" />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                        "{testimonial.text}"
+                      </p>
+                      <div className="flex items-center mt-auto">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                          <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                          <div className="text-sm text-gray-500">{testimonial.title}</div>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                ))}
               </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                "Best photo printing service in Orange County! Same day service is amazing and the quality is outstanding. I've been coming here for years."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-3">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Sarah M.</div>
-                  <div className="text-sm text-gray-500">Laguna Beach Customer</div>
-                </div>
-              </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 hover-lift transition-all duration-300 border-0 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                "Professional quality at great prices. The staff is knowledgeable and helped me choose the perfect paper for my wedding photos."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-3">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Mike R.</div>
-                  <div className="text-sm text-gray-500">Irvine Customer</div>
-                </div>
-              </div>
-            </Card>
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevTestimonialsSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <button
+              onClick={nextTestimonialsSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Next testimonials"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600" />
+            </button>
 
-            <Card className="p-6 hover-lift transition-all duration-300 border-0 shadow-lg md:col-span-2 lg:col-span-1">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400" role="img" aria-label="5 star rating">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                "Fast, reliable, and affordable. I upload my photos online and pick them up the same day. Can't beat their service!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Jennifer L.</div>
-                  <div className="text-sm text-gray-500">Newport Beach Customer</div>
-                </div>
-              </div>
-            </Card>
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {Array.from({ length: maxTestimonialsSlides + 1 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setTestimonialsCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === testimonialsCurrentSlide 
+                      ? 'bg-blue-600 scale-110' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to testimonial slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            
           </div>
 
           <div className="text-center mt-12">

@@ -10,6 +10,27 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			// Primary fonts from Laguna Digital website
+  			'titillium': ['"Titillium Web"', 'sans-serif'],
+  			'jost': ['Jost', 'sans-serif'],
+  			'inter': ['Inter', 'sans-serif'],
+  			// Set defaults to match main site
+  			'sans': ['"Titillium Web"', 'sans-serif'],
+  		},
+  		fontSize: {
+  			// Heading sizes from main website
+  			'h1': ['36px', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h2': ['28px', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h3': ['24px', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h4': ['21px', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h5': ['18px', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h6': ['16px', { lineHeight: '1.2', fontWeight: '500' }],
+  			// Body text from main website
+  			'body': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+  			// Navigation text
+  			'nav': ['15px', { lineHeight: '1.4', fontWeight: '500' }],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

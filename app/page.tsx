@@ -470,9 +470,9 @@ export default function PhotoPrintingPage() {
               <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm font-medium px-4 py-2">
                 <span role="img" aria-label="Trophy">🏆</span> #1 Rated Print Shop in Orange County
               </Badge>
-              <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 id="hero-heading" className="text-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
                 Professional Photo Printing
-                <span className="block text-xl sm:text-2xl md:text-3xl text-blue-200 mt-2 font-light">
+                <span className="block text-xl sm:text-2xl md:text-3xl text-blue-200 mt-2 font-light font-jost">
                   Starting at $2.45 • Same Day Service
                 </span>
               </h1>
@@ -527,8 +527,8 @@ export default function PhotoPrintingPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Print Shop?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-h2 text-gray-900 mb-4">Why Choose Our Print Shop?</h2>
+            <p className="text-body text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the difference of true in-house processing at Orange County's premier printing shop
             </p>
           </div>
@@ -538,8 +538,8 @@ export default function PhotoPrintingPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Clock className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-gray-900">Same Day Pickup</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-h4 text-gray-900 mb-3">Same Day Pickup</h3>
+              <p className="text-body text-gray-600 leading-relaxed">
                 Order by 2PM, ready by 5PM. No waiting days for your prints.
               </p>
             </div>
@@ -548,24 +548,24 @@ export default function PhotoPrintingPage() {
                              <div className="w-20 h-20 bg-gradient-to-br from-[#2384C7] to-[#1D65B7] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-gray-900">In-House Processing</h3>
-              <p className="text-gray-600 leading-relaxed">All printing done on-site with professional equipment.</p>
+              <h3 className="text-h4 text-gray-900 mb-3">In-House Processing</h3>
+              <p className="text-body text-gray-600 leading-relaxed">All printing done on-site with professional equipment.</p>
             </div>
 
             <div className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <DollarSign className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-gray-900">Best Prices</h3>
-              <p className="text-gray-600 leading-relaxed">Competitive rates with bulk discounts available.</p>
+              <h3 className="text-h4 text-gray-900 mb-3">Best Prices</h3>
+              <p className="text-body text-gray-600 leading-relaxed">Competitive rates with bulk discounts available.</p>
             </div>
 
             <div className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-gray-900">100% Guarantee</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-h4 text-gray-900 mb-3">100% Guarantee</h3>
+              <p className="text-body text-gray-600 leading-relaxed">
                 Complete satisfaction guaranteed or we'll reprint for free.
               </p>
             </div>
@@ -581,15 +581,15 @@ export default function PhotoPrintingPage() {
                              <Badge className="mb-6 bg-[#2384C7]/10 text-[#2384C7] font-medium px-4 py-2 rounded-full">
                 Premium Quality Printing Shop
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-h2 text-gray-900 mb-6">
                 Orange County's Most Trusted High Quality Print Shop
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-body text-lg text-gray-600 mb-6 leading-relaxed">
                 At Laguna Digital, we've been serving Orange County as the premier printing shop for over 15 years. Our
                 commitment to quality, speed, and customer satisfaction has made us the go-to copy shop for thousands of
                 satisfied customers in Laguna Beach, Irvine, and throughout Orange County.
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-body text-gray-600 mb-8 leading-relaxed">
                 Unlike other copy shops that outsource their work, we do everything in-house with professional-grade
                 equipment. This means faster turnaround times, better quality control, and competitive pricing that
                 makes us the most affordable print shop near you without compromising on quality.
@@ -654,8 +654,8 @@ export default function PhotoPrintingPage() {
       <section id="pricing" className="py-20 bg-gray-50" aria-labelledby="pricing-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="pricing-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Affordable Print Shop Pricing</h2>
-            <p className="text-xl text-gray-600 mb-6">
+            <h2 id="pricing-heading" className="text-h2 text-gray-900 mb-6">Affordable Print Shop Pricing</h2>
+            <p className="text-body text-xl text-gray-600 mb-6">
               Professional quality prints at the best prices in Orange County
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
@@ -787,8 +787,8 @@ export default function PhotoPrintingPage() {
       <section className="py-20" aria-labelledby="sources-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="sources-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">We Print From Any Digital Source</h2>
-            <p className="text-xl text-gray-600">Bring your photos from anywhere - our copy shop handles them all</p>
+            <h2 id="sources-heading" className="text-h2 text-gray-900 mb-6">We Print From Any Digital Source</h2>
+            <p className="text-body text-xl text-gray-600">Bring your photos from anywhere - our copy shop handles them all</p>
                          <Badge className="mt-4 bg-green-100 text-green-800 text-base px-4 py-2 font-medium rounded-full">
                <Upload className="w-4 h-4 mr-2 inline" />
                All Formats Accepted

@@ -203,87 +203,87 @@ export default function PhotoPrintingPage() {
   ]
 
   const additionalServices = [
-    {
-      title: "Film Development",
-      desc: "Professional 35mm and medium format film processing with same-day service",
-      icon: Camera,
-      price: "From $12.99",
-      turnaround: "Same Day"
-    },
-    {
-      title: "Slide Processing & Duplication",
-      desc: "Convert and duplicate 35mm slides with high-quality digital scanning",
-      icon: ImageIcon,
-      price: "From $1.99/slide",
-      turnaround: "2-3 Days"
-    },
+          {
+        title: "Film Development",
+        desc: "Professional 35mm and medium format film processing with same-day service",
+        image: "https://unsplash.com/photos/l_d78pNk37A/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ5OTQxNjAyfA&force=true",
+        price: "From $12.99",
+        turnaround: "Same Day"
+      },
+          {
+        title: "Slide Processing & Duplication",
+        desc: "Convert and duplicate 35mm slides with high-quality digital scanning",
+        image: "https://unsplash.com/photos/bzdhc5b3Bxs/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8cG93ZXJwb2ludHxlbnwwfHx8fDE3NDk5NDE0Nzd8MA&force=true",
+        price: "From $1.99/slide",
+        turnaround: "2-3 Days"
+      },
     { 
       title: "Image CD's", 
       desc: "Digital photo storage and backup CDs for long-term preservation", 
-      icon: HardDrive,
+      image: "https://unsplash.com/photos/1iVKwElWrPA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fENEfGVufDB8fHx8MTc0OTg0Mzc5Mnww&force=true",
       price: "From $9.99",
       turnaround: "Same Day"
     },
     { 
       title: "Custom T-Shirts", 
       desc: "Photo t-shirt printing on premium cotton with vibrant colors", 
-      icon: Shirt,
+      image: "https://unsplash.com/photos/4u3_pQklVwc/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mzl8fFQlMjBTaGlydHxlbnwwfHx8fDE3NDk5NDI2NTd8MA&force=true",
       price: "From $19.99",
       turnaround: "2-3 Days"
     },
     { 
       title: "Document Scanning", 
       desc: "Regular and oversized document scanning up to 36 inches wide", 
-      icon: FileImage,
+      image: "https://unsplash.com/photos/8DEDp6S93Po/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8ZG9jdW1lbnQlMjBzY2FubmluZ3xlbnwwfHx8fDE3NDk5NDI2ODB8MA&force=true",
       price: "From $0.99/page",
       turnaround: "Same Day"
     },
     { 
       title: "Photo Slideshow", 
       desc: "Professional digital photo presentation creation for events", 
-      icon: MonitorSpeaker,
+      image: "https://unsplash.com/photos/aV5xrpB0bwQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjB8fGFsYnVtfGVufDB8fHx8MTc0OTk0Mjk1MHwy&force=true",
       price: "From $49.99",
       turnaround: "3-5 Days"
     },
     { 
       title: "Photo Mounting", 
       desc: "Foam-core, Gator-board, Sintra and PVC mounting for displays", 
-      icon: Frame,
+      image: "https://unsplash.com/photos/v8A9_PkbljA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mzd8fGdhdG9yYm9hcmQlMjBkaXNwbGF5fGVufDB8fHx8MTc0OTk0MzAyNHwy&force=true",
       price: "From $15.99",
       turnaround: "2-3 Days"
     },
     { 
       title: "Custom Calendars", 
       desc: "Personalized photo calendars with your favorite memories", 
-      icon: CalendarDays,
+      image: "https://unsplash.com/photos/hDuNk0ubnAw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8Y2FsZW5kZXJ8ZW58MHx8fHwxNzQ5OTQzMDU1fDI&force=true",
       price: "From $24.99",
       turnaround: "3-5 Days"
     },
     { 
       title: "Large Format Posters", 
       desc: "High-resolution poster printing up to 48 inches wide", 
-      icon: Printer,
+      image: "https://unsplash.com/photos/UIG7Q73bC8Q/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8bGFyZ2UlMjBwb3N0ZXJ8ZW58MHx8fHwxNzQ5OTQzMDczfDI&force=true",
       price: "From $29.99",
       turnaround: "Same Day"
     },
     { 
       title: "Canvas Prints", 
       desc: "Gallery-wrapped canvas prints with museum-quality materials", 
-      icon: PaintBucket,
+      image: "https://unsplash.com/photos/VH8w75u3LE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y2FudmFzfGVufDB8fHx8MTc0OTk0MzEyMnwy&force=true",
       price: "From $49.99",
       turnaround: "3-5 Days"
     },
     { 
       title: "Photo Restoration", 
       desc: "Professional repair of damaged, faded, or torn photographs", 
-      icon: RotateCcw,
+      image: "https://unsplash.com/photos/-XNm4sB5kkM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fG9sZCUyMHBob3RvfGVufDB8fHx8MTc0OTkzNjA1MHwy&force=true",
       price: "From $39.99",
       turnaround: "5-7 Days"
     },
     { 
       title: "Greeting Cards", 
       desc: "Custom greeting cards for holidays and special occasions", 
-      icon: Heart,
+      image: "https://unsplash.com/photos/_j_wGc2iJB8/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8Z3JlZXRpbmclMjBjYXJkfGVufDB8fHx8MTc0OTk0MzE3OHwy&force=true",
       price: "From $2.99",
       turnaround: "Same Day"
     },
@@ -946,12 +946,15 @@ export default function PhotoPrintingPage() {
                 style={{ transform: `translateX(-${currentSlide * (100 / itemsVisible)}%)` }}
               >
                 {additionalServices.map((service, index) => {
-                  const IconComponent = service.icon
                   return (
                     <div key={index} className="flex-shrink-0 px-2" style={{ width: `${100 / itemsVisible}%` }}>
-                      <Card className="h-full text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-xl hover:border-blue-300">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:from-blue-500 group-hover:to-blue-600 transition-all duration-300 shadow-sm group-hover:shadow-md">
-                          <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                      <Card className="h-full text-center hover-lift transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 group hover:shadow-xl hover:border-blue-300 overflow-hidden">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
+                          <img 
+                            src={service.image} 
+                            alt={service.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
                         </div>
                         <h3 className="font-semibold text-sm sm:text-base mb-2 text-gray-900 group-hover:text-blue-900 transition-colors duration-300">{service.title}</h3>
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3">{service.desc}</p>

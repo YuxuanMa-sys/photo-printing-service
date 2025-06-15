@@ -19,17 +19,27 @@ const config: Config = {
   			'sans': ['"Titillium Web"', 'sans-serif'],
   		},
   		fontSize: {
-  			// Heading sizes from main website
-  			'h1': ['36px', { lineHeight: '1.2', fontWeight: '500' }],
-  			'h2': ['28px', { lineHeight: '1.2', fontWeight: '500' }],
-  			'h3': ['24px', { lineHeight: '1.2', fontWeight: '500' }],
-  			'h4': ['21px', { lineHeight: '1.2', fontWeight: '500' }],
-  			'h5': ['18px', { lineHeight: '1.2', fontWeight: '500' }],
-  			'h6': ['16px', { lineHeight: '1.2', fontWeight: '500' }],
-  			// Body text from main website
-  			'body': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+  			// Responsive heading sizes from main website
+  			'h1': ['clamp(24px, 5vw, 36px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h2': ['clamp(20px, 4vw, 28px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h3': ['clamp(18px, 3.5vw, 24px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h4': ['clamp(16px, 3vw, 21px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h5': ['clamp(15px, 2.5vw, 18px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			'h6': ['clamp(14px, 2vw, 16px)', { lineHeight: '1.2', fontWeight: '500' }],
+  			// Responsive body text from main website
+  			'body': ['clamp(14px, 2vw, 16px)', { lineHeight: '1.5', fontWeight: '400' }],
   			// Navigation text
-  			'nav': ['15px', { lineHeight: '1.4', fontWeight: '500' }],
+  			'nav': ['clamp(13px, 2vw, 15px)', { lineHeight: '1.4', fontWeight: '500' }],
+  		},
+  		screens: {
+  			'xs': '475px',
+  			// Default Tailwind breakpoints are preserved
+  		},
+  		spacing: {
+  			'safe-top': 'env(safe-area-inset-top)',
+  			'safe-bottom': 'env(safe-area-inset-bottom)',
+  			'safe-left': 'env(safe-area-inset-left)',
+  			'safe-right': 'env(safe-area-inset-right)',
   		},
   		colors: {
   			background: 'hsl(var(--background))',

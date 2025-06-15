@@ -217,10 +217,10 @@
     --sidebar-border: 0 0% 89.8%;
     --sidebar-ring: 0 0% 3.9%;
     
-      /* Laguna Digital Brand Colors */
-  --laguna-blue: #2384C7;
-  --laguna-blue-dark: #1D65B7;
-  --laguna-blue-light: #2484c6;
+    /* Laguna Digital Brand Colors */
+    --laguna-blue: #2384C7;
+    --laguna-blue-dark: #1D65B7;
+    --laguna-blue-light: #3B82F6;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -413,5 +413,448 @@
       animation: none !important;
       transition: none !important;
     }
+  }
+}
+
+/* ========================================
+   ELEMENTOR-COMPATIBLE COMPONENT CLASSES
+   ======================================== */
+
+@layer components {
+  /* BRAND COLORS - Use these in Elementor */
+  .laguna-blue { color: var(--laguna-blue); }
+  .laguna-blue-bg { background-color: var(--laguna-blue); }
+  .laguna-blue-dark { color: var(--laguna-blue-dark); }
+  .laguna-blue-dark-bg { background-color: var(--laguna-blue-dark); }
+  
+  /* TYPOGRAPHY CLASSES - Elementor Compatible */
+  .laguna-heading {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .laguna-body {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .laguna-nav {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* BUTTON COMPONENTS - Elementor Compatible */
+  .laguna-btn-primary {
+    @apply bg-[#2384C7] hover:bg-[#1D65B7] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 min-h-[44px];
+  }
+  
+  .laguna-btn-secondary {
+    @apply border-2 border-[#2384C7] text-[#2384C7] hover:bg-[#2384C7] hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 min-h-[44px];
+  }
+  
+  .laguna-btn-white {
+    @apply bg-white text-[#2384C7] hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg shadow-xl transition-all duration-300 min-h-[44px] border-0;
+  }
+
+  /* CARD COMPONENTS - Elementor Compatible */
+  .laguna-card {
+    @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .laguna-card-feature {
+    @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .laguna-card-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300;
+  }
+
+  /* SECTION LAYOUTS - Elementor Compatible */
+  .laguna-section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+  
+  .laguna-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .laguna-section-header {
+    @apply text-center mb-12 sm:mb-16;
+  }
+  
+  .laguna-section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6;
+  }
+  
+  .laguna-section-subtitle {
+    @apply text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0;
+  }
+
+  /* GRID LAYOUTS - Elementor Compatible */
+  .laguna-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8;
+  }
+  
+  .laguna-grid-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8;
+  }
+  
+  .laguna-grid-4 {
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6;
+  }
+
+  /* HERO SECTION - Elementor Compatible */
+  .laguna-hero {
+    @apply relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] text-white py-8 sm:py-12 md:py-14 lg:py-16;
+  }
+  
+  .laguna-hero-overlay {
+    @apply absolute inset-0 bg-black/20;
+  }
+  
+  .laguna-hero-content {
+    @apply relative text-center max-w-4xl mx-auto;
+  }
+  
+  .laguna-hero-badge {
+    @apply mb-4 sm:mb-6 bg-white/20 text-white border border-white/30 text-xs sm:text-sm font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full;
+  }
+  
+  .laguna-hero-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 leading-tight font-jost font-medium;
+  }
+  
+  .laguna-hero-subtitle {
+    @apply block text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-200 mt-2 font-light font-jost;
+  }
+  
+  .laguna-hero-description {
+    @apply text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-95 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0;
+  }
+  
+  .laguna-hero-buttons {
+    @apply flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4 sm:px-0;
+  }
+  
+  .laguna-hero-stats {
+    @apply grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 mx-4 sm:mx-0;
+  }
+
+  /* PRICING TABLE - Elementor Compatible */
+  .laguna-pricing-container {
+    @apply bg-white rounded-2xl shadow-xl overflow-hidden;
+  }
+  
+  .laguna-pricing-header {
+    @apply bg-gradient-to-r from-[#0066b4] to-[#044a80] text-white p-6 sm:p-8;
+  }
+  
+  .laguna-pricing-table {
+    @apply w-full;
+  }
+  
+  .laguna-pricing-card {
+    @apply p-4 hover:bg-gray-50 transition-colors duration-200;
+  }
+  
+  .laguna-pricing-card-popular {
+    @apply bg-blue-50 border-l-4 border-blue-500;
+  }
+
+  /* CONTACT CARDS - Elementor Compatible */
+  .laguna-contact-card {
+    @apply text-center border-0 shadow-lg rounded-2xl overflow-hidden;
+  }
+  
+  .laguna-contact-header {
+    @apply p-6 sm:p-8;
+  }
+  
+  .laguna-contact-icon {
+    @apply w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6;
+  }
+  
+  .laguna-contact-content {
+    @apply p-6 sm:p-8 space-y-4 sm:space-y-6;
+  }
+
+  /* FOOTER - Elementor Compatible */
+  .laguna-footer {
+    @apply bg-gray-900 text-white py-12 sm:py-16;
+  }
+  
+  .laguna-footer-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8;
+  }
+  
+  .laguna-footer-section {
+    @apply space-y-3 sm:space-y-4;
+  }
+  
+  .laguna-footer-title {
+    @apply font-bold mb-4 sm:mb-6 text-base sm:text-lg;
+  }
+  
+  .laguna-footer-link {
+    @apply hover:text-white transition-colors text-sm sm:text-base;
+  }
+
+  /* MOBILE OPTIMIZATIONS - Elementor Compatible */
+  .laguna-mobile-touch {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .laguna-mobile-text {
+    @apply text-sm sm:text-base;
+  }
+  
+  .laguna-mobile-spacing {
+    @apply space-y-3 sm:space-y-4;
+  }
+  
+  .laguna-mobile-padding {
+    @apply p-4 sm:p-6;
+  }
+
+  /* UTILITY CLASSES - Elementor Compatible */
+  .laguna-focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .laguna-hover-lift {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .laguna-transition {
+    @apply transition-all duration-300;
+  }
+  
+  .laguna-shadow-soft {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* RESPONSIVE UTILITIES - Elementor Compatible */
+  .laguna-responsive-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+  
+  .laguna-responsive-heading {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  .laguna-responsive-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .laguna-responsive-margin {
+    @apply mb-6 sm:mb-8 lg:mb-12;
+  }
+}
+
+/* ========================================
+   COMPLEX COMPONENTS (FOR STATIC EXPORT)
+   ======================================== */
+
+@layer components {
+  /* CAROUSEL COMPONENTS - For Static Export */
+  .laguna-carousel-container {
+    @apply relative overflow-hidden;
+  }
+  
+  .laguna-carousel-track {
+    @apply flex transition-transform duration-500 ease-in-out;
+  }
+  
+  .laguna-carousel-slide {
+    @apply flex-shrink-0;
+  }
+  
+  .laguna-carousel-nav {
+    @apply absolute top-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  
+  .laguna-carousel-nav-left {
+    @apply left-0 -translate-x-2 sm:-translate-x-4 p-2 sm:p-3 min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px];
+  }
+  
+  .laguna-carousel-nav-right {
+    @apply right-0 translate-x-2 sm:translate-x-4 p-2 sm:p-3 min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px];
+  }
+  
+  .laguna-carousel-dots {
+    @apply flex justify-center mt-6 sm:mt-8 space-x-1 sm:space-x-2;
+  }
+  
+  .laguna-carousel-dot {
+    @apply w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center cursor-pointer;
+  }
+  
+  .laguna-carousel-dot-active {
+    @apply bg-blue-600 scale-110;
+  }
+  
+  .laguna-carousel-dot-inactive {
+    @apply bg-gray-300 hover:bg-gray-400;
+  }
+
+  /* TESTIMONIALS CAROUSEL - For Static Export */
+  .laguna-testimonials-container {
+    @apply relative;
+  }
+  
+  .laguna-testimonials-track {
+    @apply flex transition-transform duration-500 ease-in-out;
+  }
+  
+  .laguna-testimonials-slide {
+    @apply flex-shrink-0 px-2 sm:px-4;
+  }
+  
+  .laguna-testimonials-card {
+    @apply p-4 sm:p-6 hover:scale-105 transition-all duration-300 border-0 shadow-lg h-full bg-white rounded-xl;
+  }
+  
+  .laguna-testimonials-stars {
+    @apply flex text-yellow-400 mb-3 sm:mb-4;
+  }
+  
+  .laguna-testimonials-text {
+    @apply text-gray-700 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base;
+  }
+  
+  .laguna-testimonials-author {
+    @apply flex items-center mt-auto;
+  }
+  
+  .laguna-testimonials-avatar {
+    @apply w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4;
+  }
+  
+  .laguna-testimonials-name {
+    @apply font-semibold text-gray-900 text-sm sm:text-base;
+  }
+  
+  .laguna-testimonials-title {
+    @apply text-xs sm:text-sm text-gray-500;
+  }
+
+  /* SERVICES CAROUSEL - For Static Export */
+  .laguna-services-container {
+    @apply relative;
+  }
+  
+  .laguna-services-nav {
+    @apply flex items-center justify-between mb-6 sm:mb-8;
+  }
+  
+  .laguna-services-nav-btn {
+    @apply rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 disabled:opacity-50 min-h-[40px] sm:min-h-[48px] border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50;
+  }
+  
+  .laguna-services-dots {
+    @apply flex space-x-1 sm:space-x-2;
+  }
+  
+  .laguna-services-dot {
+    @apply w-2 h-2 rounded-full transition-all duration-300;
+  }
+  
+  .laguna-services-dot-active {
+    @apply bg-blue-500 w-6 sm:w-8;
+  }
+  
+  .laguna-services-dot-inactive {
+    @apply bg-gray-300;
+  }
+  
+  .laguna-services-track {
+    @apply flex transition-transform duration-500 ease-in-out;
+  }
+  
+  .laguna-services-slide {
+    @apply flex-shrink-0 px-2;
+  }
+  
+  .laguna-services-card {
+    @apply h-full text-center hover:scale-105 transition-all duration-300 border border-gray-200 rounded-lg p-4 sm:p-6 hover:shadow-xl hover:border-blue-300 overflow-hidden bg-white;
+  }
+  
+  .laguna-services-image {
+    @apply w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 rounded-xl overflow-hidden shadow-lg transition-all duration-300;
+  }
+  
+  .laguna-services-title {
+    @apply font-semibold text-sm sm:text-base mb-2 text-gray-900 transition-colors duration-300;
+  }
+  
+  .laguna-services-desc {
+    @apply text-xs sm:text-sm text-gray-600 mb-2 leading-relaxed;
+  }
+  
+  .laguna-services-price {
+    @apply text-sm font-bold text-green-600 mb-1;
+  }
+  
+  .laguna-services-turnaround {
+    @apply text-xs text-blue-600 font-medium;
+  }
+}
+
+@layer utilities {
+  /* Mobile-specific utilities */
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .prevent-zoom {
+    touch-action: pan-x pan-y;
+  }
+  
+  /* Improved mobile text rendering */
+  .text-rendering-optimized {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Mobile-optimized animations */
+  .reduce-motion {
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+/* ========================================
+   COMPLEX COMPONENTS (FOR STATIC EXPORT)
+   ======================================== */
+
+@layer components {
+  /* Force correct colors for hero elements */
+  .laguna-hero-badge {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .laguna-btn-white,
+  button.laguna-btn-white {
+    background-color: white !important;
+    color: #2384C7 !important;
+    border: none !important;
+  }
+  
+  .laguna-btn-white:hover,
+  button.laguna-btn-white:hover {
+    background-color: #f3f4f6 !important;
+    color: #2384C7 !important;
   }
 }

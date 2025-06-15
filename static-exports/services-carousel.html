@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Carousel - Laguna Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Laguna Digital Brand Colors */
+        :root {
+            --laguna-blue: #2384C7;
+            --laguna-blue-dark: #1D65B7;
+            --laguna-blue-light: #3B82F6;
+        }
+        
+        body {
+            font-family: "Titillium Web", sans-serif;
+        }
+        
+        .laguna-heading {
+            font-family: "Jost", sans-serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        
+        /* Services Carousel Styles */
+        .laguna-services-container {
+            position: relative;
+        }
+        
+        .laguna-services-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .laguna-services-nav-btn {
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            border: 1px solid #d1d5db;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 48px;
+            min-width: 48px;
+        }
+        
+        .laguna-services-nav-btn:hover {
+            border-color: #9ca3af;
+            background: #f9fafb;
+        }
+        
+        .laguna-services-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .laguna-services-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .laguna-services-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .laguna-services-dot-active {
+            background: #3b82f6;
+            width: 2rem;
+        }
+        
+        .laguna-services-dot-inactive {
+            background: #d1d5db;
+        }
+        
+        .laguna-services-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            overflow: hidden;
+        }
+        
+        .laguna-services-slide {
+            flex-shrink: 0;
+            padding: 0 0.5rem;
+        }
+        
+        .laguna-services-card {
+            height: 100%;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .laguna-services-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-color: #93c5fd;
+        }
+        
+        .laguna-services-image {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto 1rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .laguna-services-card:hover .laguna-services-image {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .laguna-services-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #111827;
+            transition: color 0.3s;
+        }
+        
+        .laguna-services-card:hover .laguna-services-title {
+            color: #1e3a8a;
+        }
+        
+        .laguna-services-desc {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .laguna-services-price {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 0.25rem;
+        }
+        
+        .laguna-services-turnaround {
+            font-size: 0.75rem;
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .laguna-services-nav-btn {
+                width: 2.5rem;
+                height: 2.5rem;
+                min-height: 40px;
+                min-width: 40px;
+            }
+            
+            .laguna-services-image {
+                width: 4rem;
+                height: 4rem;
+            }
+            
+            .laguna-services-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="laguna-heading text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-4 sm:mb-6">
+                Our Photo Services
+            </h2>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+                From prints to restoration, we offer comprehensive photo services with professional quality and quick turnaround times.
+            </p>
+        </div>
+
+        <!-- Services Carousel -->
+        <div class="laguna-services-container">
+            <!-- Navigation -->
+            <div class="laguna-services-nav">
+                <button id="prevBtn" class="laguna-services-nav-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                
+                <div class="laguna-services-dots" id="dotsContainer">
+                    <!-- Dots will be generated by JavaScript -->
+                </div>
+                
+                <button id="nextBtn" class="laguna-services-nav-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Carousel Track -->
+            <div class="overflow-hidden">
+                <div id="servicesTrack" class="laguna-services-track">
+                    <!-- Service Cards -->
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://unsplash.com/photos/VH8w75u3LE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y2FudmFzfGVufDB8fHx8MTc0OTk0MzEyMnwy&force=true" alt="Canvas Prints" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Canvas Prints</h3>
+                            <p class="laguna-services-desc">Gallery-wrapped canvas prints with museum-quality materials</p>
+                            <div class="laguna-services-price">From $49.99</div>
+                            <div class="laguna-services-turnaround">3-5 Days</div>
+                        </div>
+                    </div>
+
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://unsplash.com/photos/-XNm4sB5kkM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fG9sZCUyMHBob3RvfGVufDB8fHx8MTc0OTkzNjA1MHwy&force=true" alt="Photo Restoration" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Photo Restoration</h3>
+                            <p class="laguna-services-desc">Professional repair of damaged, faded, or torn photographs</p>
+                            <div class="laguna-services-price">From $39.99</div>
+                            <div class="laguna-services-turnaround">5-7 Days</div>
+                        </div>
+                    </div>
+
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://unsplash.com/photos/_j_wGc2iJB8/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8Z3JlZXRpbmclMjBjYXJkfGVufDB8fHx8MTc0OTk0MzE3OHwy&force=true" alt="Greeting Cards" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Greeting Cards</h3>
+                            <p class="laguna-services-desc">Custom greeting cards for holidays and special occasions</p>
+                            <div class="laguna-services-price">From $2.99</div>
+                            <div class="laguna-services-turnaround">Same Day</div>
+                        </div>
+                    </div>
+
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400" alt="Photo Books" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Photo Books</h3>
+                            <p class="laguna-services-desc">Custom photo books for memories and special occasions</p>
+                            <div class="laguna-services-price">From $24.99</div>
+                            <div class="laguna-services-turnaround">3-5 Days</div>
+                        </div>
+                    </div>
+
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400" alt="Wall Art" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Wall Art</h3>
+                            <p class="laguna-services-desc">Large format prints perfect for home and office decoration</p>
+                            <div class="laguna-services-price">From $89.99</div>
+                            <div class="laguna-services-turnaround">5-7 Days</div>
+                        </div>
+                    </div>
+
+                    <div class="laguna-services-slide">
+                        <div class="laguna-services-card">
+                            <div class="laguna-services-image">
+                                <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400" alt="Business Cards" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="laguna-services-title">Business Cards</h3>
+                            <p class="laguna-services-desc">Professional business cards with premium finishes</p>
+                            <div class="laguna-services-price">From $19.99</div>
+                            <div class="laguna-services-turnaround">2-3 Days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ServicesCarousel {
+            constructor() {
+                this.track = document.getElementById('servicesTrack');
+                this.slides = document.querySelectorAll('.laguna-services-slide');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.dotsContainer = document.getElementById('dotsContainer');
+                
+                this.currentIndex = 0;
+                this.slidesPerView = this.getSlidesPerView();
+                this.totalSlides = this.slides.length;
+                this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
+                
+                this.init();
+                this.setupEventListeners();
+                this.setupResizeListener();
+            }
+            
+            getSlidesPerView() {
+                const width = window.innerWidth;
+                if (width < 640) return 1;      // Mobile
+                if (width < 768) return 2;      // Small tablet
+                if (width < 1024) return 3;     // Tablet
+                return 4;                       // Desktop
+            }
+            
+            init() {
+                this.updateSlideWidths();
+                this.createDots();
+                this.updateCarousel();
+            }
+            
+            updateSlideWidths() {
+                const slideWidth = 100 / this.slidesPerView;
+                this.slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}%`;
+                });
+            }
+            
+            createDots() {
+                this.dotsContainer.innerHTML = '';
+                const dotsCount = Math.max(1, this.maxIndex + 1);
+                
+                for (let i = 0; i < dotsCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = `laguna-services-dot ${i === 0 ? 'laguna-services-dot-active' : 'laguna-services-dot-inactive'}`;
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.dotsContainer.appendChild(dot);
+                }
+            }
+            
+            updateCarousel() {
+                const translateX = -(this.currentIndex * (100 / this.slidesPerView));
+                this.track.style.transform = `translateX(${translateX}%)`;
+                
+                // Update navigation buttons
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+                
+                // Update dots
+                const dots = this.dotsContainer.querySelectorAll('.laguna-services-dot');
+                dots.forEach((dot, index) => {
+                    dot.className = `laguna-services-dot ${
+                        index === this.currentIndex ? 'laguna-services-dot-active' : 'laguna-services-dot-inactive'
+                    }`;
+                });
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                this.updateCarousel();
+            }
+            
+            nextSlide() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex++;
+                    this.updateCarousel();
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateCarousel();
+                }
+            }
+            
+            setupEventListeners() {
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                
+                // Touch/swipe support
+                let startX = 0;
+                let isDragging = false;
+                
+                this.track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+                
+                this.track.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                });
+                
+                this.track.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+            
+            setupResizeListener() {
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        const newSlidesPerView = this.getSlidesPerView();
+                        if (newSlidesPerView !== this.slidesPerView) {
+                            this.slidesPerView = newSlidesPerView;
+                            this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
+                            this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+                            this.updateSlideWidths();
+                            this.createDots();
+                            this.updateCarousel();
+                        }
+                    }, 250);
+                });
+            }
+        }
+        
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ServicesCarousel();
+        });
+    </script>
+</body>
+</html> 

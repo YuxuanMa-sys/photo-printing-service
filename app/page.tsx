@@ -484,26 +484,26 @@ export default function PhotoPrintingPage() {
         </div>
       </div>
 
-      {/* Header */}
+      {/* Header - Elementor Compatible */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50 backdrop-blur-md bg-white/95">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="laguna-container">
           <div className="flex flex-col lg:flex-row justify-between items-center py-3 sm:py-4 gap-3 sm:gap-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#2384C7] to-[#1D65B7] rounded-lg flex items-center justify-center shadow-lg" role="img" aria-label="Laguna Digital Logo">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 laguna-blue-bg rounded-lg flex items-center justify-center shadow-lg" role="img" aria-label="Laguna Digital Logo">
                 <span className="text-white font-bold text-base sm:text-lg">LD</span>
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">LAGUNA DIGITAL</h1>
+                <h1 className="laguna-heading text-xl sm:text-2xl font-bold text-gray-900">LAGUNA DIGITAL</h1>
                 <p className="text-xs text-gray-500 font-medium">PRINT • MAIL • DESIGN</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 w-full lg:w-auto">
               <div className="text-center sm:text-right">
-                <div className="text-gray-600 text-sm font-medium">Call Now</div>
+                <div className="laguna-nav text-gray-600 text-sm font-medium">Call Now</div>
                 <a 
                   href="tel:+19494642030" 
-                  className="font-bold text-lg sm:text-xl text-[#2384C7] phone-link hover:text-[#1D65B7] transition-colors"
+                  className="laguna-nav font-bold text-lg sm:text-xl laguna-blue hover:text-[#1D65B7] transition-colors laguna-mobile-touch flex items-center justify-center"
                   aria-label="Call Laguna Digital at 949-464-2030"
                 >
                   949-464-2030
@@ -512,12 +512,12 @@ export default function PhotoPrintingPage() {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Button 
                   size="sm" 
-                  className="bg-green-600 hover:bg-green-700 text-white font-medium focus-ring px-4 py-2 min-h-[40px] text-sm"
+                  className="bg-green-600 hover:bg-green-700 text-white font-medium laguna-focus-ring px-4 py-2 laguna-mobile-touch text-sm"
                   onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
                 >
                   Order Online
                 </Button>
-                <Button size="sm" variant="outline" className="font-medium focus-ring px-4 py-2 min-h-[40px] text-sm">
+                <Button size="sm" variant="outline" className="font-medium laguna-focus-ring px-4 py-2 laguna-mobile-touch text-sm">
                   Track Order
                 </Button>
               </div>
@@ -526,30 +526,30 @@ export default function PhotoPrintingPage() {
         </div>
       </header>
 
-      {/* Hero Banner */}
+      {/* Hero Banner - Elementor Compatible */}
       <main id="main-content">
-        <section className="relative bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] text-white py-8 sm:py-12 md:py-14 lg:py-16" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-4xl mx-auto">
-              <Badge className="mb-4 sm:mb-6 bg-white/20 text-white border-white/30 text-xs sm:text-sm font-medium px-3 sm:px-4 py-1.5 sm:py-2">
+        <section className="laguna-hero" aria-labelledby="hero-heading">
+          <div className="laguna-hero-overlay" aria-hidden="true"></div>
+          <div className="laguna-container">
+            <div className="laguna-hero-content">
+              <Badge className="laguna-hero-badge">
                 <span role="img" aria-label="Trophy">🏆</span> #1 Rated Print Shop in Orange County
               </Badge>
-              <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 leading-tight font-jost font-medium">
+              <h1 id="hero-heading" className="laguna-hero-title">
                 Professional Photo Printing
-                <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-200 mt-2 font-light font-jost">
+                <span className="laguna-hero-subtitle">
                   Starting at $2.45 • Same Day Service
                 </span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-95 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+              <p className="laguna-hero-description">
                 Transform your digital memories into premium quality prints at Orange County's most trusted printing shop.
                 In-house processing, 15+ paper options, and guaranteed satisfaction.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4 sm:px-0">
+              <div className="laguna-hero-buttons">
                 <Button
                   size="lg"
-                  className="bg-white text-[#2384C7] hover:bg-gray-100 font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
+                  className="laguna-btn-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 laguna-focus-ring laguna-hover-lift laguna-mobile-touch"
                   onClick={() => window.open('https://lagunadigital.com/upload-orders/', '_blank')}
                 >
                   <Upload className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
@@ -558,7 +558,7 @@ export default function PhotoPrintingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white/10 focus-ring hover-lift min-h-[48px] sm:min-h-[56px]"
+                  className="laguna-btn-secondary border-2 border-white text-white hover:bg-white hover:text-[#2384C7] text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white/10 laguna-focus-ring laguna-hover-lift laguna-mobile-touch"
                   onClick={() => window.open('https://lagunadigital.com/request-a-quote/', '_blank')}
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
@@ -566,7 +566,7 @@ export default function PhotoPrintingPage() {
                 </Button>
               </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 mx-4 sm:mx-0">
+            <div className="laguna-hero-stats">
               <div className="text-center">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold">15+ Years</div>
                 <div className="text-xs sm:text-sm opacity-90">Experience</div>
@@ -588,30 +588,30 @@ export default function PhotoPrintingPage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section - Redesigned */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+      {/* Why Choose Us Section - Elementor Compatible */}
+      <section className="laguna-section bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <div className="laguna-container">
+          <div className="laguna-section-header">
             <Badge className="mb-4 bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full border border-orange-200">
               <Award className="w-4 h-4 mr-2 inline" />
               Why Choose Us
             </Badge>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-jost font-medium text-gray-900 mb-4 sm:mb-6">The Orange County Difference</h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+            <h2 className="laguna-section-title">The Orange County Difference</h2>
+            <p className="laguna-section-subtitle">
               Experience professional photo printing with cutting-edge technology and personalized service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+          <div className="laguna-grid-2 laguna-responsive-margin">
             {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="laguna-card-feature group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="laguna-card-icon bg-gradient-to-br from-emerald-400 to-emerald-600">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Lightning Fast Turnaround</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+                  <h3 className="laguna-heading text-lg sm:text-xl font-medium text-gray-900 mb-3">Lightning Fast Turnaround</h3>
+                  <p className="laguna-responsive-text text-gray-600 leading-relaxed mb-4">
                     Order by 2PM and pick up the same day by 5PM. No more waiting weeks for your precious memories.
                   </p>
                   <div className="flex items-center text-emerald-600 font-medium text-sm">
@@ -623,14 +623,14 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="laguna-card-feature group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="laguna-card-icon bg-gradient-to-br from-blue-500 to-blue-700">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-jost font-medium text-gray-900 mb-3">Professional In-House Processing</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+                  <h3 className="laguna-heading text-lg sm:text-xl font-medium text-gray-900 mb-3">Professional In-House Processing</h3>
+                  <p className="laguna-responsive-text text-gray-600 leading-relaxed mb-4">
                     State-of-the-art equipment and expert technicians ensure every print meets gallery standards.
                   </p>
                   <div className="flex items-center text-blue-600 font-medium text-sm">
@@ -642,9 +642,9 @@ export default function PhotoPrintingPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="laguna-card-feature group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="laguna-card-icon bg-gradient-to-br from-purple-500 to-purple-700">
                   <DollarSign className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
